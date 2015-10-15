@@ -1,0 +1,45 @@
+CS 2200 Fall 2014
+Project 4
+Name: Yang Yang
+GT Number: 902986862
+
+Problem 1B
+1:Total execution time:67.6
+2:Total execution time: 35.8
+4:Total execution time:33.5
+As the number of cpus increases, the execution time decreases but the rate of decreasing also decreases. There is not a linear relationship between cpu number and execution time since threads get backed up in the I/O queue and most of the cpu time is idle and waiting for a thread to run.
+
+Problem 2B
+----------
+
+800:
+number of context switches:134
+Total execution time: 67.6s
+Total time spent in READY state: 325.9 s
+
+600:
+number of context switches:161
+Total execution time: 67.6s
+Total time spent in READY state: 314.5 s
+
+400:
+number of context switches:202
+Total execution time: 67.6s
+Total time spent in READY state: 299.0 s
+
+200:
+number of context switches:362
+Total execution time: 67.5s
+Total time spent in READY state: 285.2 s
+
+
+The total waiting time (time spend in ready state) decreases with shorter time slices. Shortest time slice is not usually a good choice because the processor will get more context switch while the execution time remains the same, thus decrease cpu utilization. In addition, it is also likely that the processor will incur many more cache misses as it gains affinity for a new process. 
+
+Problem 3B
+----------
+
+FIFO:Total wait time : 389.9s
+Round-Robin: Total wait time: 283.1s
+Static Priority:Total wait time: 137.2s
+
+Static priority is closest to SJF since it has the least total waiting time, which is similar to SJF. SJF is a kind of priority algorithm whose priority is the inverse of the CPU burst time. 
